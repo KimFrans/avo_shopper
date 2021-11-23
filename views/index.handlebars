@@ -1,1 +1,49 @@
-<h2>Best deals</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Main</title>
+</head>
+
+<body>
+
+    {{!-- <div class="container"> --}}
+        <div class="header">
+            <h3>Avo Shopper!</h3>
+        </div>
+
+
+        <div id="top-display">
+            <h4>Top Deals</h4>
+            <ul id="top-5">
+                {{#each topavo}}
+                <li>{{this.name}} {{this.qty}} for {{this.price}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <form action="/addNewDeal" method="get">
+            <button class="add" type="submit" name="button">Add a new deal</button>
+        </form>
+
+        <form action="/shopDeal" method="get">
+            <button class="shopDeal" type="submit" name="button">shop Deal</button>
+        </form>
+
+        <form action="/recommendations" method="get">
+            <button class="recommendations" type="submit" name="button">recommendations</button>
+        </form>
+
+
+
+
+        
+    {{!-- </div> --}}
+
+</body>
+
+</html>

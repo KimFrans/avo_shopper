@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>All Stores</title>
+</head>
+<body>
+
+    <div>
+        <h2>All Stores!</h2>
+    </div>
+
+    <div id="all-stores">
+            <ul id="all">
+                {{#each shops}}
+                <li>{{this.name}}</li>
+                {{/each}}
+            </ul>
+    </div>
+
+    <form action="/addNew-shop" method="get">
+        <button class="add" type="submit" name="button">Add a new shop</button>
+    </form>
+
+    <form action="/backToAddDeals" method="get">
+        <button class="back" type="submit" name="button">Back To Add a new Deal</button>
+    </form>
+
+    <form class="" action="/backToMain" method="get">
+        <button class="main" type="submit" name="button">Back to main</button>
+    </form>
+    
+</body>
+</html>

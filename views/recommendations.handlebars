@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+</head>
+<body>
+
+    <h2>Recommendations according to your budget</h2>
+    <h4>Let us find the deals just for you ad your budget</h4>
+
+    <form class="" action="/budget" method="post">
+
+        <label for="budget">Budget Limit:</label>
+        <input type="text" id="budget" name="budget"><br>
+
+        <button class="limit" type="submit" name="button">Check deals</button>
+
+    </form>
+
+    <div id="budget deals">
+            <ul id="bd">
+                {{#each budgetDeal}}
+                <li>{{this.name}} {{this.unit_price}}</li>
+                {{/each}}
+            </ul>
+    </div>
+
+    <form class="" action="/backToMain" method="get">
+        <button class="main" type="submit" name="button">Back to main</button>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add new shop</title>
+</head>
+<body>
+
+    <h2>Add new shop</h2>
+
+    <form class="" action="/add-shop" method="post">
+
+        <label for="shopName">Shop Name:</label>
+        <input type="text" id="shopName" name="shopName"><br>
+
+        <button class="new" type="submit" name="button">Add </button>
+
+    </form>
+
+    <form action="/backToAllStores" method="get">
+        <button class="back" type="submit" name="button">Back To All Stores</button>
+    </form>
+
+    <form action="/backToAddDeals" method="get">
+        <button class="back" type="submit" name="button">Back To Add a new Deal</button>
+    </form>
+
+    <form class="" action="/backToMain" method="get">
+        <button class="main" type="submit" name="button">Back to main</button>
+    </form>
+    
+</body>
+</html>

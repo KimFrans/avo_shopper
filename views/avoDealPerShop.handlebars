@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form class="" action="/shop-deal"method="post">
+        <label for="name">Shop:</label>
+        <select name="deals" id="deals">
+            {{#each shops}}
+                <option value={{id}}>{{this.name}}</option>
+            {{/each}}
+
+        </select>
+
+
+        <button class="new" type="submit" name="button">Show deal</button>
+
+    </form>
+
+    <div id="all-deals">
+            <ul id="deal">
+                {{#each deal}}
+                <li>{{this.qty}} for {{this.price}}</li>
+                {{/each}}
+            </ul>
+    </div>
+
+    <form action="/backToAddDeals" method="get">
+        <button class="back" type="submit" name="button">Back To Add a new Deal</button>
+    </form>
+
+    <form action="/backToAllStores" method="get">
+        <button class="back" type="submit" name="button">Back To All Stores</button>
+    </form>
+
+    <form action="/recommendations" method="get">
+            <button class="recommendations" type="submit" name="button">Back Recommendations</button>
+    </form>
+
+    <form class="" action="/backToMain" method="get">
+        <button class="main" type="submit" name="button">Back to main</button>
+    </form>
+
+    
+    
+</body>
+</html>

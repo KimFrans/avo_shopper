@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add a new deal</title>
+</head>
+
+<body>
+
+    <h2>Add new deals!</h2>
+
+    {{#if messages.Mess}}
+        <div class="OutputMessage">{{messages.Mess}}</div>
+    {{/if}}
+
+    <form class="" action="/add-deals" method="post">
+        <label for="name">Shop:</label>
+        <select name="shops" id="shops">
+            {{#each shops}}
+                <option value={{id}}>{{this.name}}</option>
+            {{/each}}
+
+        </select>
+
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" name="qty"><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price"><br>
+
+        <button class="new" type="submit" name="button">submit new deal</button>
+
+    </form>
+
+    <form action="/all-shops" method="get">
+        <button class="show" type="submit" name="button">View all shops</button>
+    </form>
+
+    <form action="/back" method="get">
+        <button class="back" type="submit" name="button">Back</button>
+    </form>
+
+</body>
+
+</html>
